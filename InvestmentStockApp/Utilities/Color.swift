@@ -1,10 +1,3 @@
-//
-//  Color.swift
-//  TasksCh2
-//
-//  Created by Lavonde Dunigan on 2/5/26.
-//
-
 import SwiftUI
 import UIKit
 
