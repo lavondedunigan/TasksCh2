@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		1B40E6A92F3576A4006D4174 /* TasksCh2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasksCh2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B40E6A92F3576A4006D4174 /* InvestmentStockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentStockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1B40E6AB2F3576A4006D4174 /* TasksCh2 */ = {
+		1B40E6AB2F3576A4006D4174 /* InvestmentStockApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TasksCh2;
+			path = InvestmentStockApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		1B40E6A02F3576A4006D4174 = {
 			isa = PBXGroup;
 			children = (
-				1B40E6AB2F3576A4006D4174 /* TasksCh2 */,
+				1B40E6AB2F3576A4006D4174 /* InvestmentStockApp */,
 				1B40E6AA2F3576A4006D4174 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		1B40E6AA2F3576A4006D4174 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B40E6A92F3576A4006D4174 /* TasksCh2.app */,
+				1B40E6A92F3576A4006D4174 /* InvestmentStockApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B40E6A82F3576A4006D4174 /* TasksCh2 */ = {
+		1B40E6A82F3576A4006D4174 /* InvestmentStockApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B40E6B62F3576A6006D4174 /* Build configuration list for PBXNativeTarget "TasksCh2" */;
+			buildConfigurationList = 1B40E6B62F3576A6006D4174 /* Build configuration list for PBXNativeTarget "InvestmentStockApp" */;
 			buildPhases = (
 				1B40E6A52F3576A4006D4174 /* Sources */,
 				1B40E6A62F3576A4006D4174 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1B40E6AB2F3576A4006D4174 /* TasksCh2 */,
+				1B40E6AB2F3576A4006D4174 /* InvestmentStockApp */,
 			);
-			name = TasksCh2;
+			name = InvestmentStockApp;
 			packageProductDependencies = (
 			);
 			productName = TasksCh2;
-			productReference = 1B40E6A92F3576A4006D4174 /* TasksCh2.app */;
+			productReference = 1B40E6A92F3576A4006D4174 /* InvestmentStockApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B40E6A42F3576A4006D4174 /* Build configuration list for PBXProject "TasksCh2" */;
+			buildConfigurationList = 1B40E6A42F3576A4006D4174 /* Build configuration list for PBXProject "InvestmentStockApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B40E6A82F3576A4006D4174 /* TasksCh2 */,
+				1B40E6A82F3576A4006D4174 /* InvestmentStockApp */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B40E6A42F3576A4006D4174 /* Build configuration list for PBXProject "TasksCh2" */ = {
+		1B40E6A42F3576A4006D4174 /* Build configuration list for PBXProject "InvestmentStockApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B40E6B42F3576A6006D4174 /* Debug */,
@@ -322,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B40E6B62F3576A6006D4174 /* Build configuration list for PBXNativeTarget "TasksCh2" */ = {
+		1B40E6B62F3576A6006D4174 /* Build configuration list for PBXNativeTarget "InvestmentStockApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B40E6B72F3576A6006D4174 /* Debug */,
