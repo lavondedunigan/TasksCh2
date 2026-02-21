@@ -15,8 +15,7 @@ struct CategoriesViews: View {
                 List {
                     ForEach(categories) { category in
                         NavigationLink(value:category) {
-                            Text(category.name)
-                                .foregroundStyle(Color(hex: category.colorHex))
+                           CategoryRowView(category: category)
                                 
                         }
                     }

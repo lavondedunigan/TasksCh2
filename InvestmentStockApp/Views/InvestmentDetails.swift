@@ -13,7 +13,7 @@ struct InvestmentDetailsView: View {
                 VStack {
                     Text("Stock Title:")
                         .font(.subheadline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.teal)
                     
                     Text(investment.title)
                         .font(.headline)

@@ -45,8 +45,8 @@ struct HomeView_iPad: View {
                 
                 
             } detail: {
-                if let investement = selectedInvestment{
-                    InvestmentDetailsView(task: task)
+                if let task = selectedTask {
+                    TaskDetailsView(task: task)
                 } else {
                     Text("Select an Investment from the list")
                 }
@@ -62,7 +62,7 @@ struct HomeView_iPad: View {
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Investment.self, configurations: config)
+    let container = try! ModelContainer(for: Task.self, Category.self, configurations: config)
 
     let home = Category(name: "Home", colorHex: "#b32741")
     let work = Category(name: "Work", colorHex: "#b36827")
@@ -79,8 +79,8 @@ struct HomeView_iPad: View {
     let task4 = Task(title: "Mock Data 4", details: "Phasellus euismod nisi quis semper lobortis.", budget: 200, category: random)
     let task5 = Task(title: "Mock Data 5", details: "Nulla facilisi. Cras eget nisi vitae sem fringilla rhoncus.", budget: 150, category: moreRandom)
     let task6 = Task(title: "Mock Data 6", details: "Donec vitae justo eget elit viverra luctus.", budget: 80, category: evenMoreRandom)
-    container.mainContext.insert(inv1)
-    container.mainContext.insert(inv2)
+    container.mainContext.insert(task1)
+    container.mainContext.insert(task2)
     
 
     return HomeView_iPad()
