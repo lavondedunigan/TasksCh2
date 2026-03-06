@@ -66,22 +66,15 @@ struct HomeView_iPad: View {
 
     let home = Category(name: "Home", colorHex: "#b32741")
     let work = Category(name: "Work", colorHex: "#b36827")
-    let other = Category(name: "Other", colorHex: "#27b341")
-    let random = Category(name: "Random", colorHex: "#4127b3")
-    let moreRandom = Category(name: "More Random", colorHex: "#b34127")
-    let evenMoreRandom = Category(name: "Even More Random", colorHex: "#27b341")
+
     container.mainContext.insert(home)
     container.mainContext.insert(work)
 
     let task1 = Task(title: "Mock Data 1", details: "This is a test task", budget: 100, category: home)
-    let task2 = Task(title: "Mock Data 2", details: "Complete Forum 1 evaluation and set grades", budget: 0, category: work)
-    let task3 = Task(title: "Mock Data 3", details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", budget: 50, category: other)
-    let task4 = Task(title: "Mock Data 4", details: "Phasellus euismod nisi quis semper lobortis.", budget: 200, category: random)
-    let task5 = Task(title: "Mock Data 5", details: "Nulla facilisi. Cras eget nisi vitae sem fringilla rhoncus.", budget: 150, category: moreRandom)
-    let task6 = Task(title: "Mock Data 6", details: "Donec vitae justo eget elit viverra luctus.", budget: 80, category: evenMoreRandom)
+    let task2 = Task(title: "Mock Data 2", details: "Complete Forum 1 evaluation and set up", budget: 150, category: work)
+
     container.mainContext.insert(task1)
     container.mainContext.insert(task2)
-    
 
     return HomeView_iPad()
         .modelContainer(container)

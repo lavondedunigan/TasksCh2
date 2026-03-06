@@ -3,22 +3,29 @@ import SwiftData
 
 struct CategoryView: View {
     @State private var categoryName: String = ""
-    @State private var selectedColor: Color = .blue
+    @State private var selectedColor: Color = .teal
     
     var body: some View {
         
         ZStack {
-            Backgrounds.gradient3.ignoresSafeArea()
+            Backgrounds.gradient1.ignoresSafeArea()
             
             Form {
                 Section(header: Text("Category Details")) {
                     TextField("Category Name", text: $categoryName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocapitalization(.none)
+                        .padding()
+                        .background(Color(.systemBlue))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                        .shadow(color: Color.black.opacity(0.1), radius: 5)
                 }
                 
                 Section(header: Text("Category Color")) {
                     ColorPicker(selection: $selectedColor) {
                         Text("Select a color for your category!")
-                            .foregroundStyle(.primary)
+                            .foregroundStyle(.black)
                     }
                 }
                 
@@ -31,6 +38,16 @@ struct CategoryView: View {
                             .cornerRadius(10)
                             .padding(.horizontal)
                             .shadow(color: Color.black.opacity(0.1), radius: 5)
+                            .padding(.top)
+                            .padding(.bottom)
+                            .font(.largeTitle)
+                            .bold()
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .onTapGesture {
+                                        
+                            }
+                        
                     }
                 }
                 

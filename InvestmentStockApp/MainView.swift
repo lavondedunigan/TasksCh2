@@ -40,7 +40,8 @@ struct InvestmentStockApp: App {
                     }
                     else {
                         
-                        HomeView_iPhone()
+                        //HomeView_iPhone()
+                        ContentView()
                             .transition(.move(edge: .trailing))
                     }
                     
@@ -71,8 +72,6 @@ struct InvestmentStockApp: App {
         
         context.insert(home)
         context.insert(work)
-      
-        
         
         // tasks
         let task1 = Task(title: "Family vacation", details: "long description here", budget: 100, category: home)

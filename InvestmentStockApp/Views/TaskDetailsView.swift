@@ -13,12 +13,36 @@ struct TaskDetailsView: View {
                 VStack {
                     Text("Task Title:")
                         .font(.subheadline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.yellow)
+                        .padding()
+                        .padding(.bottom, 10)
+                        .cornerRadius(10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5)
+                        .padding()
+                        .background(Color.white.opacity(0.1))
                     
                     Text(task.title)
                         .font(.headline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.black)
                         .padding()
+                        .padding(.bottom, 10)
+                        .cornerRadius(10)
+                        .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+                        .padding()
+                        .background(Color.white.opacity(0.1))
+                    
+                    Text("Task Details:")
+                        .font(.subheadline)
+                        .foregroundStyle(.yellow)
+                        .padding()
+                        .padding(.bottom, 10)
+                        .cornerRadius(10)
+                        .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+                        .padding()
+                        .background(Color.white.opacity(0.1))
+                    
+                    Text(task.details)
+                        .font(.body)
                 }
             }
         }

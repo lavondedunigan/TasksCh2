@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    @Binding var showSheet: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    HeaderView()
+            HStack {
+                Spacer()
+                
+                Text("My Stocks")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(Color.darkBlue)
+                    
+                
+                Spacer()
+                
+                Button(action: {
+                    showSheet.toggle()
+                }) {
+                    Image(systemName: "magnifyingglass.circle.fill")
+                        .accentColor(Color.darkBlue)
+                        .font(.system(size: 40))
+                }
+            }
+        }
+    
+    //   struct HeaderView_Previews: PreviewProvider {
+    //       static var previews: some View {
+    //           HeaderView()
+    //               .padding()
+    //        }
+    //  }
+    // }
 }
