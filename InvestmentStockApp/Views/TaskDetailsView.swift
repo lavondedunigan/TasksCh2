@@ -7,50 +7,50 @@ struct TaskDetailsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                
                 Backgrounds.gradient3.ignoresSafeArea()
-                
-                VStack {
-                    Text("Task Title:")
-                        .font(.subheadline)
-                        .foregroundStyle(.yellow)
-                        .padding()
-                        .padding(.bottom, 10)
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.2), radius: 5)
-                        .padding()
-                        .background(Color.white.opacity(0.1))
-                    
+                VStack(spacing: 16) {
                     Text(task.title)
-                        .font(.headline)
-                        .foregroundStyle(.black)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
                         .padding()
-                        .padding(.bottom, 10)
-                        .cornerRadius(10)
-                        .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+                        .padding(.top)
+                        .background(Color.white.opacity(0.1))
+                        .shadow(color: Color.gray.opacity(0.2), radius: 5)
+
+                    Text(task.category.name)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
                         .padding()
                         .background(Color.white.opacity(0.1))
-                    
-                    Text("Task Details:")
-                        .font(.subheadline)
-                        .foregroundStyle(.yellow)
-                        .padding()
-                        .padding(.bottom, 10)
-                        .cornerRadius(10)
                         .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+
+                    Text("$\(task.budget)")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
                         .padding()
                         .background(Color.white.opacity(0.1))
-                    
+                        .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+
                     Text(task.details)
                         .font(.body)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.white.opacity(0.1))
+                        .shadow(color: Color.darkBlue.opacity(0.2), radius: 5)
+
+                    Spacer()
                 }
+                .padding(.horizontal)
             }
         }
     }
 }
 
 #Preview {
-    let work = Category(name: "Work", colorHex: "#b36827")
-    let task1 = Task(title: "Mock Data 1", details: "long description here", budget: 100, category: work)
+    let work = Category(name: "Results of WatchList", colorHex: "#b36827")
+    let task1 = Task(title: "Goals Results", details: "Stockdata", budget: 6000, category: work)
     TaskDetailsView(task: task1)
 }
