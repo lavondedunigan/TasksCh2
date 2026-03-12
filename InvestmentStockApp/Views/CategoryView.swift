@@ -4,111 +4,108 @@ import SwiftData
 struct CategoryView: View {
     @State private var categoryName: String = ""
     @State private var selectedColor: Color = .teal
-    
+
     var body: some View {
-        
         ZStack {
             Backgrounds.gradient1.ignoresSafeArea()
-            
+
             Form {
                 Section(header: Text("Category Details")) {
                     TextField("Category Name", text: $categoryName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocapitalization(.none)
+                        .contrast(0.5)
                         .padding()
-                        .background(Color(.systemGray4))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                        .shadow(color: Color.black.opacity(0.1), radius: 5)
+                        .foregroundColor(.darkBlue)
+                        .multilineTextAlignment(.center)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .textInputAutocapitalization(.never)
+                        .bold()
                 }
-                
+
                 Section(header: Text("Category Color")) {
                     ColorPicker(selection: $selectedColor) {
                         Text("Select a color for your category!")
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.primary)
                     }
                 }
-                
+
                 Section {
-                    Button(action: {}) {
+                    Button(action: addCategory) {
                         Text("Add Category")
                             .foregroundColor(.white)
-                            .padding()
-                            .background(Color.gray)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
-                            .shadow(color: Color.black.opacity(0.1), radius: 5)
-                            .padding(.top)
-                            .padding(.bottom)
-                            .font(.largeTitle)
-                            .bold()
-                            .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
-                            .onTapGesture {
-                                        
-                            }
-                        
+                            .padding()
+                            .background(Color.teal)
+                            .cornerRadius(10)
                     }
                 }
-                
+
                 Section {
-                    Button(action:{})
-                    {
+                    Button(action: skip) {
                         Text("Skip")
                             .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.lightGrreen)
+                            .background(Color.yellow)
                             .cornerRadius(10)
-                            .padding(.horizontal)
-                            .shadow(color: Color.black.opacity(0.1), radius: 5)
                     }
                 }
-                
+
                 Section {
-                    Button(action: {
-                        // TODO: Add action for this button
-                    }) {
+                    Button(action: previewColor) {
                         HStack {
                             Image(systemName: "paintpalette")
                             Text("Preview Color")
                         }
                     }
                 }
-                
+
                 Section {
-                    Button(action: {}) {
+                    Button(action: cancel) {
                         Text("Cancel")
                             .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
                             .padding()
                             .background(Color.red)
                             .cornerRadius(10)
-                            .padding(.horizontal)
-                            .shadow(color: Color.black.opacity(0.1), radius: 5)
                     }
                 }
-            } // form ends
+            }
             .scrollContentBackground(.hidden)
-        } // zstack ends
+        }
         .navigationTitle("Create Category")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Cancel") {
-                    
-                    
-                }
-                
+                Button("Cancel", action: cancel)
             }
-            
         }
         .onAppear {
-            
+            // Perform any initial setup if needed
         }
     }
-}
 
-struct CategoryView_Previews: PreviewProvider {
-    static var previews: some View {
+    // MARK: - Actions
+    private func addCategory() {
+        // TODO: Implement adding a category using SwiftData
+        // Validate input
+        // Save model
+    }
+
+    private func skip() {
+        // TODO: Implement skip behavior (e.g., dismiss)
+    }
+
+    private func previewColor() {
+        // TODO: Implement preview behavior if desired
+    }
+
+    private func cancel() {
+        // TODO: Implement cancel behavior (e.g., dismiss)
+    }
+}
+#Preview {
+    NavigationStack {
         CategoryView()
     }
 }
+

@@ -7,19 +7,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
-                // Header
-                HeaderView(showSheet: $isShowingStockSearchSheet)
-                
+     
                 // Navigation button to HomeView_iPhone
                 HStack {
                     Button {
                         goToHomeViewIphone = true
                     } label: {
                         Image(systemName: "house.fill")
-                            .font(.system(size: 30))
+                            .font(.system(size: 40))
                             .foregroundStyle(Color.darkBlue)
-                          
+                            //.accessibility(label: Text("Go to HomeView_iPhone"))
                     }
+                    
+                    // Header
+                    HeaderView(showSheet: $isShowingStockSearchSheet)
+                    
+
                     Spacer()
                 }
                 .padding(.horizontal)

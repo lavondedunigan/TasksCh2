@@ -7,7 +7,6 @@ struct StockItem: Identifiable {
     var price: String
     var change: String
     var logoURL: String
-  
 }
 
 struct StocksListView: View {
@@ -21,6 +20,7 @@ struct StocksListView: View {
         StockItem(ticker: "WDC", companyName: "Western Digital Corporation", price: "$24.48", change: "+0.80%", logoURL: "https://logo.clearbit.com/westerndigital.com"),
         StockItem(ticker: "NTAP", companyName: "NetApp Inc.", price: "$17.49", change: "+1.00%", logoURL: "https://logo.clearbit.com/netapp.com"),
     ]
+    
 
     var body: some View {
         NavigationStack {
@@ -33,18 +33,14 @@ struct StocksListView: View {
                             price: stock.price,
                             change: stock.change,
                             logoURL: stock.logoURL
-                            
                         )
                     }
                 }
                 .padding()
             }
             .navigationTitle("My Stocks")
-            .onAppear {
-
-            }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .primaryAction) {
                     Button {
                         addRandomStock()
                     } label: {
@@ -57,7 +53,6 @@ struct StocksListView: View {
     }
 
     private func addRandomStock() {
-        // Example: cycles through a few predefined stocks
         let candidates: [StockItem] = [
             StockItem(ticker: "AAPL", companyName: "Apple Inc.", price: "$149.87", change: "+1.20%", logoURL: "https://logo.clearbit.com/apple.com"),
             StockItem(ticker: "MSFT", companyName: "Microsoft Corp.", price: "$402.11", change: "-0.42%", logoURL: "https://logo.clearbit.com/microsoft.com"),

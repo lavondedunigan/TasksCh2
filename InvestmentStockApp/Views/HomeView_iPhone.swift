@@ -22,6 +22,7 @@ struct HomeView_iPhone: View {
     @State private var isPresentingAboutView: Bool = false
     @State private var isPresentingShareView: Bool = false
     @State private var isPresentingHelpView: Bool = false
+    @State private var isPresentingStockFile: Bool = false
     
     
     private var filteredInvestments: [Investment] {
@@ -86,6 +87,9 @@ struct HomeView_iPhone: View {
                     }
                     .listStyle(.plain)
                 }
+                .navigationDestination(isPresented: $isPresentingStockFile) {
+                    StocksListView()
+                }
             }
             .navigationTitle("Portfolio")
             .toolbarTitleDisplayMode(.inline)
@@ -123,16 +127,13 @@ struct HomeView_iPhone: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {}) {
+                    Button(action: {
+                        // logic
+                        isPresentingStockFile = true
+                    }) {
                         Label("Add Item", systemImage: "plus")
-                            .padding()
                             .background(Color(.systemGray6))
-                            .cornerRadius(8)
                             .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 0)
-                            .padding(.horizontal, 32)
-                            .padding(.vertical, 8)
-                            .onTapGesture {
-                            }
                             .foregroundColor(.primary)
                             .fixedSize()
                             .frame(maxWidth: .infinity)
@@ -140,15 +141,9 @@ struct HomeView_iPhone: View {
                             .clipped()
                             .font(.headline)
                             .fontWeight(.bold)
-                            .padding()
-                            .background(Color(.systemGray6))
                             .cornerRadius(8)
-                            .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 0)
                             .padding(.horizontal, 32)
                             .padding(.vertical, 8)
-                            .onTapGesture {
-                                
-                            }
                     }
                     .accessibilityIdentifier("add-button")
                     .accessibilityLabel(Text("Add a new investment"))

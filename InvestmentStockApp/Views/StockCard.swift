@@ -20,8 +20,14 @@ struct StockCard: View {
                 .onTapGesture {
                     }
                 Text(formattedPrice)
+                    .fixedSize()
+                    .accessibility(identifier: "stock-price")
+                    .accessibility(value: Text(formattedPrice))
+                    .accessibility(hint: Text("Tap to view more information"))
+                    .onTapGesture {
+                    }
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.red)
                     .font(Font.subheadline.weight(.semibold))
                     .lineLimit(1).fixedSize(horizontal: false, vertical: true)
                     .truncationMode(.tail)
@@ -43,7 +49,7 @@ struct StockCard: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .stroke(Color.primary.opacity(0.15))
+                .stroke(Color(.black).opacity(0.1), lineWidth: 1)
         )
         .padding(.horizontal)
     }
@@ -64,9 +70,17 @@ struct StockCard: View {
         StockCard(name: "AMZN", price: 3410.00)
         StockCard(name: "FB", price: 300.78)
         StockCard(name: "NFLX", price: 245.32)
+        StockCard(name: "BABA", price: 150.23)
+        StockCard(name: "TSLA", price: 700.00)
     }
+    .font(.caption)
+    .padding(8)
+    .background(Color(.systemGreen))
     .padding()
-    .background(Color(.systemGroupedBackground))
+    .background(Color(.systemBlue))
+    .padding(16)
+    .frame(maxWidth: .infinity)
+    
     
     
 }

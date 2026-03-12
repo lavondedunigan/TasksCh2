@@ -1,12 +1,16 @@
 import SwiftUI
 
 struct PortfolioCard: View {
+    @State private var isShowingDepositView: Bool = false
+    @State private var isShowingWithdrawView: Bool = false
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Portfolio Value")
-                .foregroundStyle(Color.gray)
-                .font(.title2)
-            
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Text("Portfolio Value")
+                    .foregroundStyle(Color.gray)
+                    .font(.title2)
+                
                 HStack(alignment: .top) {
                     Text("$1332.30")
                         .bold()
@@ -17,11 +21,14 @@ struct PortfolioCard: View {
                         .bold()
                         .font(.title3)
                 }
-            
+                
                 Spacer()
-
+                
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        // logic
+                        isShowingDepositView = true
+                    }) {
                         Text("Deposit")
                             .foregroundStyle(Color.white)
                             .bold()
@@ -31,12 +38,15 @@ struct PortfolioCard: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.blue)
                             )
-                           
-                                    
-                            
+                        
+                        
+                        
                     }
-
-                    Button(action: {}) {
+                    
+                    Button(action: {
+                        // logic
+                        isShowingWithdrawView = true
+                    }) {
                         Text("Withdraw")
                             .foregroundStyle(Color.white)
                             .bold()
@@ -47,7 +57,16 @@ struct PortfolioCard: View {
                                     .fill(Color.gray)
                             )
                     }
+
                     Spacer()
+                    
+                }
+                .navigationDestination(isPresented: $isShowingDepositView){
+                    DepositView()
+                }
+                
+                .navigationDestination(isPresented: $isShowingWithdrawView){
+                    WithdrawView()
                 }
             }
             .padding()
@@ -58,7 +77,7 @@ struct PortfolioCard: View {
                     .fill(Color.darkBlue)
             )
         }
-        
+    }
     }
 
 struct PortfolioCard_Previews: PreviewProvider {

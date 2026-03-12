@@ -7,7 +7,7 @@ struct WatchListView: View {
             VStack(spacing: 16) {
                 Text("Watch List")
                     .padding()
-                    .background(Color(.lightGray))
+                    //.background(Color(.lightGray))
                     .cornerRadius(10)
                     .padding(.horizontal)
                     .padding(10)
@@ -20,10 +20,13 @@ struct WatchListView: View {
                     .bold()
                     .padding(.top, 10)
                     .padding(.bottom, 10)
-
+                    .onTapGesture {
+                        print("tapping Watch List")
+                    }
+                
                 Text("Add a new goal")
                     .padding()
-                    .background(Color(.lightGray))
+                   // .background(Color(UIColor.lightGray))
                     .cornerRadius(10)
                     .padding(.horizontal)
                     .padding(10)
@@ -31,13 +34,13 @@ struct WatchListView: View {
                     .offset(y: 10)
                     .padding(.top, 5)
                     .padding(.bottom, 10)
-                    .background(Color(.teal))
+                    .background(Color.teal)
                     .font(.title)
                     .bold()
                     .padding(.top, 10)
                     .padding(.bottom, 10)
             }
-
+            
             // Stock cards list
             ScrollView {
                 VStack {
@@ -54,11 +57,12 @@ struct WatchListView: View {
             }
         }
     }
-}
-
-struct WatchListView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchListView()
+    
+    
+    struct WatchListView_Previews: PreviewProvider {
+        static var previews: some View {
+            WatchListView()
+        }
     }
+    
 }
-

@@ -31,6 +31,7 @@ struct InvestmentDetailsView: View {
                 }
             }
             .navigationTitle("Investment Details")
+            .bold()
         }
     }
 }
