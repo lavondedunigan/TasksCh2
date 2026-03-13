@@ -6,41 +6,32 @@ struct WatchListView: View {
             // Header section
             VStack(spacing: 16) {
                 Text("Watch List")
-                    .padding()
-                    //.background(Color(.lightGray))
-                    .cornerRadius(10)
-                    .padding(.horizontal)
-                    .padding(10)
-                    .shadow(radius: 10)
-                    .offset(y: 10)
-                    .padding(.top, 5)
-                    .padding(.bottom, 10)
-                    .background(Color(.teal))
                     .font(.title)
                     .bold()
-                    .padding(.top, 10)
-                    .padding(.bottom, 10)
-                    .onTapGesture {
-                        print("tapping Watch List")
-                    }
-                
-                Text("Add a new goal")
                     .padding()
-                   // .background(Color(UIColor.lightGray))
+                    .background(Color(.systemTeal))
                     .cornerRadius(10)
-                    .padding(.horizontal)
-                    .padding(10)
                     .shadow(radius: 10)
-                    .offset(y: 10)
-                    .padding(.top, 5)
-                    .padding(.bottom, 10)
-                    .background(Color.teal)
-                    .font(.title)
-                    .bold()
-                    .padding(.top, 10)
-                    .padding(.bottom, 10)
             }
-            
+            .padding(.horizontal)
+            .padding(.top, 15)
+            .padding(.bottom, 10)
+
+            // Add new goal button/row
+            Text("Add a new goal")
+                .font(.title)
+                .bold()
+                .padding()
+                .background(Color.teal)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+                .padding(.horizontal)
+                .padding(.top, 5)
+                .padding(.bottom, 10)
+                .onTapGesture {
+                    print("tapping Add a new goal")
+                }
+
             // Stock cards list
             ScrollView {
                 VStack {
@@ -57,12 +48,11 @@ struct WatchListView: View {
             }
         }
     }
-    
-    
-    struct WatchListView_Previews: PreviewProvider {
-        static var previews: some View {
-            WatchListView()
-        }
-    }
-    
 }
+
+struct WatchListView_Previews: PreviewProvider {
+    static var previews: some View {
+        WatchListView()
+    }
+}
+

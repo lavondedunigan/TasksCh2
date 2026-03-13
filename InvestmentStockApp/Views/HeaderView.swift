@@ -19,20 +19,20 @@ struct HeaderView: View {
                     .font(.largeTitle)
                     .bold()
                     .foregroundStyle(Color.darkBlue)
-                    .bold()
 
                 
                 Spacer()
                 
-                Button(action: {
-                    showSheet.toggle()
-                }) {
+                Button(action: { showSheet.toggle() }) {
                     Image(systemName: "magnifyingglass.circle.fill")
-                        .accentColor(Color.darkBlue)
+                        .foregroundStyle(Color.darkBlue)
                         .font(.system(size: 40))
+                       
+                        }
+                    }
                 }
             }
-        }
+
     
     //   struct HeaderView_Previews: PreviewProvider {
     //       static var previews: some View {
@@ -41,4 +41,4 @@ struct HeaderView: View {
     //        }
     //  }
     // }
-}
+

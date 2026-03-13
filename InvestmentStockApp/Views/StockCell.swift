@@ -55,6 +55,7 @@ struct StockCell_Previews: PreviewProvider {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Add Stock") {
                             showingAddStockAlert = true
+                            
                         }
                     }
                 }

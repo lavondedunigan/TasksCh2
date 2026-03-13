@@ -10,6 +10,8 @@ struct SearchStockView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .stroke(Color.darkBlue, lineWidth: 1)
+                        .padding()
+                        .bold()
                 )
                 .padding()
                 .textInputAutocapitalization(.never)
@@ -28,16 +30,25 @@ struct SearchStockView: View {
             Divider()
             StockCell(stock: "DISNEY", description: "Entertainment")
             Divider()
+            StockCell(stock: "WDC", description: "Computers")
             
             Spacer()
             
             NavigationLink(destination: SearchStockView()) {
                 Text("Search Again")
-                    .foregroundColor(.blue)
+                    .font(.headline)
+                    .bold()
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .foregroundColor(.purple)
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .stroke(style: StrokeStyle(lineWidth: 1, dash: [2]))
+                            
+                        
                     )
             }
             .padding()

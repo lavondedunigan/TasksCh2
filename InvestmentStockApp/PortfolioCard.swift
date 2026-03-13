@@ -8,8 +8,23 @@ struct PortfolioCard: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 Text("Portfolio Value")
-                    .foregroundStyle(Color.gray)
+                    .font(Font.title.bold())
+                    .padding(.bottom, 10)
+                    .foregroundStyle(Color.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal, 10)
+                    .padding(.top, 10).padding(10)
+                    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
+                    
+                    
+                
+                Text("$1332.30")
+                    .foregroundStyle(Color.green)
                     .font(.title2)
+                    
                 
                 HStack(alignment: .top) {
                     Text("$1332.30")
@@ -36,7 +51,15 @@ struct PortfolioCard: View {
                             .padding(.horizontal)
                             .background(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.blue)
+                                    .fill(Color.brown)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
+                                    .cornerRadius(10)
+                                    .padding(.horizontal, 10)
+                                    .padding(.top, 10)
+                                    .padding(.bottom, 10)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
+                                    .cornerRadius(10)
+                    
                             )
                         
                         
@@ -54,7 +77,12 @@ struct PortfolioCard: View {
                             .padding(.horizontal)
                             .background(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.gray)
+                                    .fill(Color.gray).cornerRadius(10)
+                                    .padding(.horizontal, 10)
+                                    .padding(.top, 10)
+                                    .padding(.bottom, 10)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 0)
+                                    .cornerRadius(10)
                             )
                     }
 

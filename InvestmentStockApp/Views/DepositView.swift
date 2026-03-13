@@ -17,18 +17,28 @@ struct DepositView: View {
                         .foregroundColor(.white)
                         .bold()
                         .font(.title2)
-                 
+                    
+                    Text("Deposit")
+                        .font(.subheadline)
+                        .foregroundStyle(.black)
+                        .bold()
+                        .padding(8)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                        .shadow(radius: 5)
+                        .padding()
+                    
+                    
                 }
             }
-            
-            
-
         }
-
-       
+    }
+    
+#if DEBUG
+struct DepositView_Previews: PreviewProvider {
+    static var previews: some View {
+        DepositView()
     }
 }
-
-#Preview {
-    DepositView()
+#endif
 }
