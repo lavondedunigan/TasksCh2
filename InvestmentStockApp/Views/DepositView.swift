@@ -27,8 +27,6 @@ struct DepositView: View {
                         .cornerRadius(8)
                         .shadow(radius: 5)
                         .padding()
-                    
-                    
                 }
             }
         }
