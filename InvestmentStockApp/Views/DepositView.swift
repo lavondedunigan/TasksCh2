@@ -23,7 +23,7 @@ struct DepositView: View {
                         .foregroundStyle(.black)
                         .bold()
                         .padding(8)
-                        .background(Color.blue)
+                        .background(Color.brown)
                         .cornerRadius(8)
                         .shadow(radius: 5)
                         .padding()
